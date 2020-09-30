@@ -1,91 +1,154 @@
+<!-- You are missing the link to somewhere on your page resubmit and I'll add the points back in -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>document</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <ul>
-        <li><a href="/file.txt" target="_blank">about</a></li> <!--added part of site for week2 hw 2-->
-    </ul>
-    <div>
-        <p>this is a paragraph, Hello world!</p>
-    </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>document</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="container">
+			<!--?added container class-->
 
-    <div id='parent'>
-        <p>hello im a child</p>
-    </div>
-    <a href="www.google.com" target="_blank">google</a> <!--added another site for week2 hw 2-->
-    <a href="www.runescape.com" target="_blank">runescape</a>
-    <br>
-    <i>this is italic</i>
-    <br>
-    <strong>this is bold text</strong>
-    <br>
+			<div class="center">
+				<ul>
+					<li><a href="/file.txt" target="_blank">about</a></li>
+					<!--added part of site for week2 hw 2-->
+				</ul>
+			</div>
+			<div class="center">
+				<!--?added center class-->
+				<p>this is a paragraph, Hello world!</p>
+			</div>
 
-    <ul id='id'>        <!--unordered list-->
-        <li>this is an unordered list</li>
-        <li>another unordered list
-            <ul>
-                <li>this is a nested list</li> <!--nested list-->
-            </ul>
-        </li>
-    </ul>
+			<div id="parent" class="center">
+				<!--?added center class-->
+				<p>hello im a child</p>
+			</div>
 
-    <ol class='class'>        <!--ordered list-->
-        <li>this is an ordered list</li>
-        <li>another ordered list
-            <ol>
-                <li>a nested list</li> <!--nested list-->
-            </ol>
-        </li>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/hGIW2fDb0jg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div class="center">
+				<!--?added center class-->
+				<a href="www.google.com" target="_blank">google</a>
+				<!--added another site for week2 hw 2-->
+				<a href="www.runescape.com" target="_blank">runescape</a>
+				<!--!we talked about how to do these earlier today-->
+				<br />
+				<i>this is italic</i>
+				<br />
+				<strong>this is bold text</strong>
+				<br />
+			</div>
 
-    <audio controls>
-        <source src="Egzod & EMM - Don't Surrender [NCS Release].mp3" type="audio/mpeg"> <!--audio Song: Egzod & EMM - Don't Surrender [NCS Release]
-            Music provided by NoCopyrightSounds
-            Free Download/Stream: http://ncs.io/DontSurrender
-            Watch: http://youtu.be/MkMTJAGwLQc-->
-    </audio>
-        <br>
-    <table border="solid black 1px"> <!--creating a table-->
-        <thead>
-            <th>name</th>
-            <th>year</th>
-            <th>age</th>
-        </thead>
-        <tbody border="solid black 1px">
-            <td>john doe</td>
-            <td>2020</td>
-            <td>25</td>
-        </tbody>
-    </table>
-        <br>
+			<div class="center">
+				<!--?added center class-->
+				<ul id="id">
+					<!--unordered list-->
+					<li>this is an unordered list</li>
+					<li>
+						another unordered list
+						<ul>
+							<li>this is a nested list</li>
+							<!--nested list-->
+						</ul>
+					</li>
+				</ul>
 
-    <form action="process.js" method="POST"> <!--creating a form-->
-        <label for="username" id="username">Enter your username: </label>
-        <input type="text" name="username" id="username" placeholder="username" required>
-        <br>
-        <label for="password" id="password">Enter your password: </label>
-        <input type="password" id="password" name="password" placeholder="password" required> <br>
-        <label for="checkbox" id="checkbox">save password</label>
-        <input type="checkbox" name="checkbox" id='checkbox'> <br>
-        <label for="submit"></label><Br>
-        <textarea for='textarea' id='textarea'placeholder="add some details about you"></textarea> <!--textarea-->
-        <br>
-        <!--create a dropdown list -->
-        <select name="select" id='select'>
-            <option selected value="single">single</option>
-            <option value="in_love">in love</option>
-            <option value="not_sure">not sure</option>
-        </select>
+				<ol class="class">
+					<!--ordered list-->
+					<li>this is an ordered list</li>
+					<li>
+						another ordered list
+						<ol>
+							<li>a nested list</li>
+							<!--nested list-->
+						</ol>
+					</li>
+				</ol>
+			</div>
 
+			<div class="center">
+				<!--?added center class-->
+				<iframe
+					width="560"
+					height="315"
+					src="https://www.youtube.com/embed/hGIW2fDb0jg"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen
+				></iframe>
 
-        <input type="submit" id="submit" name='submit'>
+				<audio controls>
+					<source
+						src="Egzod & EMM - Don't Surrender [NCS Release].mp3"
+						type="audio/mpeg"
+					/>
+					<!--audio Song: Egzod & EMM - Don't Surrender [NCS Release]
+                Music provided by NoCopyrightSounds
+                Free Download/Stream: http://ncs.io/DontSurrender
+                Watch: http://youtu.be/MkMTJAGwLQc-->
+				</audio>
+			</div>
+			<!--? <br> <-- we can get rid of the <br> because we have some margin on all of our "centered" divs! -->
 
-        
+			<div class="center">
+				<table border="solid black 1px">
+					<!--creating a table-->
+					<thead>
+						<th>name</th>
+						<th>year</th>
+						<th>age</th>
+					</thead>
+					<tbody border="solid black 1px">
+						<td>john doe</td>
+						<td>2020</td>
+						<td>25</td>
+					</tbody>
+				</table>
+			</div>
+			<!--? <br> <-- we can get rid of the <br> because we have some margin on all of our "centered" divs! -->
 
-</body>
+			<div class="center">
+				<form action="process.js" method="POST">
+					<!--creating a form-->
+					<label for="username" id="username">Enter your username: </label>
+					<input
+						type="text"
+						name="username"
+						id="username"
+						placeholder="username"
+						required
+					/>
+					<br />
+					<label for="password" id="password">Enter your password: </label>
+					<input
+						type="password"
+						id="password"
+						name="password"
+						placeholder="password"
+						required
+					/>
+					<br />
+					<label for="checkbox" id="checkbox">save password</label>
+					<input type="checkbox" name="checkbox" id="checkbox" /> <br />
+					<label for="submit"></label><br />
+					<textarea
+						for="textarea"
+						id="textarea"
+						placeholder="add some details about you"
+					></textarea>
+					<!--textarea-->
+					<br />
+					<!--create a dropdown list -->
+					<select name="select" id="select">
+						<option selected value="single">single</option>
+						<option value="in_love">in love</option>
+						<option value="not_sure">not sure</option>
+					</select>
+
+					<input type="submit" id="submit" name="submit" />
+				</form>
+			</div>
+		</div>
+	</body>
 </html>

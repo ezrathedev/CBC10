@@ -1,21 +1,48 @@
 body {
-    background-color: lightgray;
+	background-color: lightgray;
 } /* add a light gray color to the background*/
 
 div p {
-    
-    padding: 20px;
+	padding: 20px;
 }
 #parent {
-    width: 1000px;
-    height: 50px; 
-    font-weight: bold;
-    margin: 50px auto;
-    border: 1px solid red;
+	/* width: 1000px; */
+	width: 100%; /*? this is just a stylistic choice to keep it contained inside the container class */
+	height: 50px;
+	font-weight: bold;
+	margin: 50px auto;
+	border: 1px solid red;
 }
 #parent p {
-    width: 50%;
-    border: solid 1px green;
+	width: 50%;
+	border: solid 1px green;
+	/* ! You're inheriting 20px of padding from div p { padding: 20px; } */
+	padding: 0;
+	/* ? just centering some more stuff */
+	margin: 16px auto;
+	text-align: center;
 }
 
+/* ?Just to center all of the content */
+.container {
+	max-width: 900px;
+	margin: 0 auto;
+}
 
+.center > * {
+	display: block;
+	margin: 25px auto;
+	text-align: center;
+}
+
+/*? We don't want to display the table as block or it gets all wonky */
+.center > table {
+	display: table;
+	width: 50%;
+}
+
+/* ?I wouldn't remove this, for the homework because I need to see the bullets/numbers however looks weird center so I got rid of them */
+ul,
+ol {
+	list-style: none;
+}

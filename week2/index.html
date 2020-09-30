@@ -1,91 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>document</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <ul>
-        <li><a href="/file.txt" target="_blank">about</a></li> <!--added part of site for week2 hw 2-->
-    </ul>
-    <div>
-        <p>this is a paragraph, Hello world!</p>
-    </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>document</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<ul>
+			<li><a href="/file.txt" target="_blank">about</a></li>
+			<!--added part of site for week2 hw 2-->
+		</ul>
+		<div>
+			<p>this is a paragraph, Hello world!</p>
+		</div>
 
-    <div id='parent'>
-        <p>hello im a child</p>
-    </div>
-    <a href="www.google.com" target="_blank">google</a> <!--added another site for week2 hw 2-->
-    <a href="www.runescape.com" target="_blank">runescape</a>
-    <br>
-    <i>this is italic</i>
-    <br>
-    <strong>this is bold text</strong>
-    <br>
+		<div id="parent">
+			<p>hello im a child</p>
+		</div>
+		<!-- These links don't work. You need to include the protocol. If not its trying to get /week2/www.google.com OR /week2/www.runescape.com -->
+		<!--<a href="www.google.com" target="_blank">google</a>-->
+		<!--added another site for week2 hw 2-->
+		<!-- <a href="www.runescape.com" target="_blank">runescape</a> -->
+		<a href="http://www.google.com" target="_blank">Go To Google</a>
+		<a href="https://www.runescape.com/splash" target="_blank">Play Runescape</a>
+		<br />
+		<i>this is italic</i>
+		<br />
+		<strong>this is bold text</strong>
+		<br />
 
-    <ul id='id'>        <!--unordered list-->
-        <li>this is an unordered list</li>
-        <li>another unordered list
-            <ul>
-                <li>this is a nested list</li> <!--nested list-->
-            </ul>
-        </li>
-    </ul>
+		<!-- Lists look good! -->
+		<ul id="id">
+			<!--unordered list-->
+			<li>this is an unordered list</li>
+			<li>
+				another unordered list
+				<ul>
+					<li>this is a nested list</li>
+					<!--nested list-->
+				</ul>
+			</li>
+		</ul>
 
-    <ol class='class'>        <!--ordered list-->
-        <li>this is an ordered list</li>
-        <li>another ordered list
-            <ol>
-                <li>a nested list</li> <!--nested list-->
-            </ol>
-        </li>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/hGIW2fDb0jg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<ol class="class">
+			<!--ordered list-->
+			<li>this is an ordered list</li>
+			<li>
+				another ordered list
+				<ol>
+					<li>a nested list</li>
+					<!--nested list-->
+				</ol>
+			</li>
+			<!--Missing this closing ol tag-->
+		</ol>
 
-    <audio controls>
-        <source src="Egzod & EMM - Don't Surrender [NCS Release].mp3" type="audio/mpeg"> <!--audio Song: Egzod & EMM - Don't Surrender [NCS Release]
+		<!-- This can be useful, will bookmark -->
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/hGIW2fDb0jg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+		<!-- Nice job! Good song choice as well. -->
+		<audio controls>
+			<source src="Egzod & EMM - Don't Surrender [NCS Release].mp3" type="audio/mpeg" />
+			<!--audio Song: Egzod & EMM - Don't Surrender [NCS Release]
             Music provided by NoCopyrightSounds
             Free Download/Stream: http://ncs.io/DontSurrender
             Watch: http://youtu.be/MkMTJAGwLQc-->
-    </audio>
-        <br>
-    <table border="solid black 1px"> <!--creating a table-->
-        <thead>
-            <th>name</th>
-            <th>year</th>
-            <th>age</th>
-        </thead>
-        <tbody border="solid black 1px">
-            <td>john doe</td>
-            <td>2020</td>
-            <td>25</td>
-        </tbody>
-    </table>
-        <br>
+		</audio>
+		<br />
+		<!--<table border="solid black 1px">-->
+		<!--creating a table-->
+		<table style="border: 1px solid black">
+			<!--You just forgot the style attribute, there is no "border" attribute-->
+			<thead>
+				<th>name</th>
+				<th>year</th>
+				<th>age</th>
+			</thead>
+			<!-- <tbody border="solid black 1px"> -->
+			<!-- Instructions for homework say to make a table with 3 columns and 2 rows. No big deal but attention to detail -->
+			<tbody style="border: solid 1px black">
+				<!--Same deal here, however I don't think will actually effect anything. I threw some basic table styling in your styles.css file-->
+				<!-- this should be wrapped in a <tr> tag for table row -->
+				<tr>
+					<td>john doe</td>
+					<td>2020</td>
+					<td>25</td>
+				</tr>
+				<tr>
+					<td>Jane Deer</td>
+					<td>2020</td>
+					<td>42</td>
+				</tr>
+			</tbody>
+		</table>
+		<br />
 
-    <form action="process.js" method="POST"> <!--creating a form-->
-        <label for="username" id="username">Enter your username: </label>
-        <input type="text" name="username" id="username" placeholder="username" required>
-        <br>
-        <label for="password" id="password">Enter your password: </label>
-        <input type="password" id="password" name="password" placeholder="password" required> <br>
-        <label for="checkbox" id="checkbox">save password</label>
-        <input type="checkbox" name="checkbox" id='checkbox'> <br>
-        <label for="submit"></label><Br>
-        <textarea for='textarea' id='textarea'placeholder="add some details about you"></textarea> <!--textarea-->
-        <br>
-        <!--create a dropdown list -->
-        <select name="select" id='select'>
-            <option selected value="single">single</option>
-            <option value="in_love">in love</option>
-            <option value="not_sure">not sure</option>
-        </select>
+		<!-- Form looks great! -->
+		<form action="process.js" method="POST">
+			<!--creating a form-->
+			<label for="username" id="username">Enter your username: </label>
+			<!-- Nice job using the placeholder attribute, I use this all the time -->
+			<!-- Also good job with the required attribute validation is always something to have on the mind -->
+			<input type="text" name="username" id="username" placeholder="username" required />
+			<br />
+			<label for="password" id="password">Enter your password: </label>
+			<input type="password" id="password" name="password" placeholder="password" required /> <br />
+			<label for="checkbox" id="checkbox">save password</label>
+			<input type="checkbox" name="checkbox" id="checkbox" /> <br />
+			<label for="submit"></label><br />
+			<!-- missing a space between textarea & placeholder -->
+			<textarea for="textarea" id="textarea" placeholder="add some details about you"></textarea>
+			<!--textarea-->
+			<br />
+			<!--create a dropdown list -->
+			<select name="select" id="select">
+				<!-- nice use of selected -->
+				<option selected value="single">single</option>
+				<option value="in_love">in love</option>
+				<option value="not_sure">not sure</option>
+			</select>
 
-
-        <input type="submit" id="submit" name='submit'>
-
-        
-
-</body>
+			<!-- You can add a reset button to, you don't need to its just an option I can't remember if I covered in class -->
+			<input type="reset" value="reset form" />
+			<!-- If you want to name the input button something other than submit you can do that with the value attribute -->
+			<input type="submit" id="submit" name="submit" value="submit form please" />
+			<!-- forgot closing form tag -->
+		</form>
+	</body>
 </html>

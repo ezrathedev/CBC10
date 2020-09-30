@@ -1,21 +1,25 @@
 body {
-    background-color: lightgray;
+	background-color: lightgray;
 } /* add a light gray color to the background*/
 
 div p {
-    
-    padding: 20px;
+	padding: 20px;
 }
 #parent {
-    width: 1000px;
-    height: 50px; 
-    font-weight: bold;
-    margin: 50px auto;
-    border: 1px solid red;
+	width: 1000px;
+	height: 50px;
+	font-weight: bold;
+	margin: 50px auto;
+	border: 1px solid red;
 }
 #parent p {
-    width: 50%;
-    border: solid 1px green;
+	width: 50%;
+	border: solid 1px green;
 }
 
-
+/* Harcourt styles */
+td,
+th {
+	border: 1px solid black;
+}
+/* Harcourt styles */

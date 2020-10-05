@@ -1,0 +1,15 @@
+body{
+    background-color: #333;
+    color:#fff;
+    font-family: sans-serif;
+
+}
+.box{
+    width: 500px;
+    height: 100vw;
+    border: 1px green solid;
+}
+div {
+    height: 25%;
+    width: 500px;
+}

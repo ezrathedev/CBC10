@@ -14,15 +14,15 @@ div {
     width: 500px;
     border:solid red 1px;
 }
-*.box:first-child{
+div .box:first-child{
     border:red 1px solid;
     width: 100%;
 }
 *:last-child{
     border: blue 1px solid;
 }
-.box div #one {
-    display: flex;
+.box div  {
+    /* display: flex;
     justify-content: right;
-    flex-direction: row;
+    flex-direction: row; */
 }

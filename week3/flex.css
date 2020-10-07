@@ -16,7 +16,8 @@ nav{
     display: flex;
     align-content:flex-start;
     flex-direction: row ;
-    position: relative;
+    position: fixed;
+    width: 100%; height: 100%;
 }
 nav ul{
     list-style-type: none; /*this is used to take the bullets away*/
@@ -29,54 +30,67 @@ nav ul{
     align-items: center;
     display: flex;
     flex-direction: row;
-    height: 50px;
-   
-
-    
+    height: 30px;
 }
 
 
-footer {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    background-color: #333333;
-    color: #fff;
-    padding:10px;
-    height:50%;
-}
+
+
 #showcase {
-height: 100%;
+height: 100vh;
 width: 100%;
 text-align: center;
 background-color:mediumseagreen;
 color:white;
-padding: 3rem 0 3rem 0;
+padding: 0 0 3rem 0;
+margin:0;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
 
-}
-#showcase h1{
-    margin:0 0 1rem 0;
-}
-.info {
-    display: flex;
-    height:50vh;
-    width: 100%;
-    color:white;
-}
+
 img, content{
     width:50%;
     flex-direction: column;
     padding: 1rem;
     justify-content: center;
-
 }
+
+
 h2 {
     margin: 0 0 0.5 0;
-    border-bottom: 1px;
-    border: solid white;
+    border-bottom: solid white;
 }
 .info-1 {
-     background-image: url('https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
-     background-size: cover;
      background-color: steelblue;
- }
+     display: flex;
+     flex-direction: row;
+     align-items:flex-end ; }
+
+.info-2{
+         background: firebrick;
+         display: flex;
+         flex-direction: column;
+         justify-content:right;
+         align-items: flex-end;
+     }
+ .info-1.img{
+   background-image: url('https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+   background-repeat: no-repeat;
+   align-items: flex-end;
+    } 
+
+    footer {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        background-color: #333333;
+        color: #fff;
+        padding:10px;
+        height:50%;
+    }
+    /* @media homestrech {
+
+    } */

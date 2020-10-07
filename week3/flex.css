@@ -1,18 +1,38 @@
 body{
     font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+li {
+    padding: 60px;
+}
+
+li:hover{
+    color:lightblue;
+    cursor: pointer;
 }
 
 nav{
     display: flex;
     align-content:flex-start;
     flex-direction: row ;
+    position: relative;
 }
 nav ul{
     list-style-type: none; /*this is used to take the bullets away*/
     width:100%;
     margin:0 auto;
-    background: #333333;
+    padding: 1.3em;
+    background: hsl(0, 0%, 20%);
     color: #fff;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+   
+
+    
 }
 
 
@@ -26,5 +46,37 @@ footer {
     height:50%;
 }
 #showcase {
+height: 100%;
+width: 100%;
+text-align: center;
+background-color:mediumseagreen;
+color:white;
+padding: 3rem 0 3rem 0;
 
 }
+#showcase h1{
+    margin:0 0 1rem 0;
+}
+.info {
+    display: flex;
+    height:50vh;
+    width: 100%;
+    color:white;
+}
+img, content{
+    width:50%;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+
+}
+h2 {
+    margin: 0 0 0.5 0;
+    border-bottom: 1px;
+    border: solid white;
+}
+.info-1 {
+     background-image: url('https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+     background-size: cover;
+     background-color: steelblue;
+ }

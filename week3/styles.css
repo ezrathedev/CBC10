@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding:0;
+}
+body {
+    background-color: #333333;
+}
+.container {
+    background-color: #333333;
+    color: #ffffff;
+    font-family: sans-serif;
+    border: solid 1px green;
+    width:500px;
+    height: 100vh;
+    margin: 0 auto;
+
+    
+}
+.box {
+    height: 25%;
+display: inline-block;
+width:49%;
+margin:-2px;
+}
+.container div:first-child {
+  border: solid 1px red;
+
+}
+.container div:last-child {
+  border: solid 1px blue;
+}
+
+
+@media (min-width: 1201px) {
+    .container div {
+      display: block;
+    width: auto; }
+}

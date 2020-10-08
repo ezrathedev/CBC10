@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    color:white;
+}
+li {
+    padding: 60px;
+}
+
+li:hover{
+    color:lightblue;
+    cursor: pointer;
+}
+
+nav{
+    /* display: flex; */
+    align-content:flex-start;
+    flex-direction: row ;
+    position: fixed;
+    width: 100%;
+}
+nav ul{
+    list-style-type: none; /*this is used to take the bullets away*/
+    width:100%;
+    margin:0 auto;
+    padding: 1.3em;
+    background: hsl(0, 0%, 20%);
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+}
+
+
+
+
+#showcase {
+height: 100vh;
+width: 100%;
+text-align: center;
+background-color:mediumseagreen;
+color:white;
+padding: 0 0 3rem 0;
+margin:0;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+
+
+  .info-1 .content{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem ;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+   
+    
+}
+.info {
+    height: 50vh;
+}
+
+
+
+.info-1 .img{
+    background:url('https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+    
+    align-items: flex-end;
+    flex-basis: 50%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.info-1 {
+     background-color: steelblue;
+     display: flex;
+     flex-direction: row;
+     align-items:flex-start;
+     /* height: 5; */
+    }
+    .info-2 {  
+        display: flex;
+        flex-direction: row;
+        align-items:flex-start;
+        background: firebrick;
+        height:50vh;
+        padding:0 1rem;}
+        
+
+.info-2 .content{
+         
+         /* display: flex; */
+         flex-basis: 50%;
+         justify-content:center;
+         align-items: flex-start;
+         /* background-size: cover; */
+         height: 100%;
+         
+    
+
+         
+        }
+  .info-2 .img {
+   background: url('https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+   align-items: flex-end;
+   display: flex;
+   flex-basis: 50%;
+   height: 100%;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   
+} 
+
+    footer {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        background-color: #333333;
+        color: #fff;
+        padding:10px;
+        height:50%;
+    }
+    /* @media homestrech {
+
+    } */

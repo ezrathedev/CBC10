@@ -1,45 +1,50 @@
-* {
-    margin: 0;
-    padding:0;
-}
-body {
-    background-color: #333333;
-}
-.container {
-    background-color: #333333;
-    color: #ffffff;
-    font-family: sans-serif;
-    border: solid 1px green;
-    width:500px;
-    height: 100vh;
-    margin: 0 auto;
+/*! Added in some blank lines to clean everything up */
 
-    
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	/* background-color: #333333; */ /*? You can shorten this to just #333 since they're repeating, you can also do not have to specify background-color, just using simply background will work. Either is fine just want you to be aware of the options. */
+	background: #333;
+}
+
+.container {
+	/* background-color: #333333; */ /*? We've already made the background of the entire body #333 so this is redundant. */
+	/* color: #ffffff; */ /*? We should place this in either our :root, html, or body. Though we don't need this right now as there is no text to apply this color too. */
+	/* font-family: sans-serif; */ /*? Its best to place our font in one of three places :root, html, or body. Though we don't need one now as there is no font on this page */
+	border: solid 1px green;
+	width: 500px;
+	height: 100vh;
+	margin: 0 auto;
+	/** Good job! */
 }
 .box {
-    height: 25%;
-display: inline-block;
-width:49%;
-margin:-2px;
+	height: 25%;
+	/* display: inline-block; */ /*? I know the instructions say to do it this way, but I also just want to discuss a better way with flex. I had you do it with inline-block since we hadn't covered flex yet. Lets take a look at flex and discuss some of the advantages. */
+	/* width: 49%; */ /*? Just changing this to 50% for our flex example. */
+	width: 50%; /*? This wouldn't work for inline-block as the boxes would wrap */
+	/* margin: -2px; */ /*? Just removing this for the flex example. */
 }
 .container div:first-child {
-  border: solid 1px red;
-
+	border: solid 1px red;
 }
 .container div:last-child {
-  border: solid 1px blue;
+	border: solid 1px blue;
 }
 
-
-@media (min-width: 1201px) {
+/*! This media query was making the boxes tiny lines when over 1200px, this is because you are giving it the display of inline, which you cannot add heights and width values to. Thats why they where deflating. The application works fine if you just take this component out. */
+/* @media (min-width: 1201px) {
     .container div {
       display: inline;
     width: auto; }
-}
+} */
 
-@media (max-width: 500px){
-  .container div{
-    display: block;
-    width: auto;
-  }
+@media (max-width: 500px) {
+	.container div {
+		display: block;
+		width: auto;
+	}
 }

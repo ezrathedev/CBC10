@@ -109,9 +109,6 @@ flex-direction: column;
          /* background-size: cover; */
          height: 100%;
          
-    
-
-         
         }
   .info-2 .img {
    background: url('https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
@@ -134,6 +131,7 @@ flex-direction: column;
         padding:10px;
         height:50%;
     }
-    /* @media homestrech {
-
-    } */
+        @media (max-width: 500px) {
+         body{
+            display: block;}
+        }

@@ -33,6 +33,13 @@ margin:-2px;
 
 @media (min-width: 1201px) {
     .container div {
-      display: block;
+      display: inline;
     width: auto; }
+}
+
+@media (max-width: 500px){
+  .container div{
+    display: block;
+    width: auto;
+  }
 }

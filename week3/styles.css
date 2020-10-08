@@ -1,9 +1,10 @@
+/*! Great job! Added some feedback on different approaches and formatting  */
 /*! Added in some blank lines to clean everything up */
 
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	box-sizing: border-box; /*? We need this for our flex example, I don't remember if I mentioned it in class but border-box pushes the padding inside the box instead of outside, but also does the same with the border. I.E. a 100px X 100px box with a 5px border, in border-box has a total size of 100px X 100px, in content-box which is the default value for the box-sizing property the total size would be 110px X 110px */
 }
 
 body {
@@ -20,20 +21,43 @@ body {
 	height: 100vh;
 	margin: 0 auto;
 	/** Good job! */
+	display: flex; /*? We need flex here to turn make a row */
+	flex-wrap: wrap; /*? We need flex-wrap here because when we set the width to 100% in the media query we want our flex-items to wrap over on to the next line */
+	align-content: flex-start; /*? I don't think I covered this in class, but there is a difference between align-items & align-content. The main difference comes down to align-items is for single line flex boxes and align-content is for multi line flex boxes. Since we have flex-wrap set to wrap and we are making our divs have a width of 100% we will have a multi line flex box so we need to use align-content. For what its worth align-content has no effect on single line flex boxes and align-items has no effect on multi line flex boxes. Check it out by changing the above value around. Read more here ---> https://stackoverflow.com/questions/27539262/whats-the-difference-between-align-content-and-align-items */
 }
+
 .box {
 	height: 25%;
-	/* display: inline-block; */ /*? I know the instructions say to do it this way, but I also just want to discuss a better way with flex. I had you do it with inline-block since we hadn't covered flex yet. Lets take a look at flex and discuss some of the advantages. */
+	/* display: inline-block; */ /*? I know the instructions say to do it this way, but I also just want to discuss a better way with flex. I had you do it with inline-block since we hadn't covered flex yet. Notice the gap between the the two blocks when we use display: inline-block. This is actually one of the problems with CSS. You can read more about here ---> https://stackoverflow.com/questions/19038799/why-is-there-an-unexplainable-gap-between-these-inline-block-div-elements Fortunately we don't have to deal with this in flex box. Lets take a look. */
 	/* width: 49%; */ /*? Just changing this to 50% for our flex example. */
-	width: 50%; /*? This wouldn't work for inline-block as the boxes would wrap */
+	width: 50%; /*? This wouldn't work for inline-block as the boxes would wrap, but this will be fine with flex box */
 	/* margin: -2px; */ /*? Just removing this for the flex example. */
 }
+
+/** Nice job with the advanced selectors, just added in some other ways you could accomplish the same thing.  */
 .container div:first-child {
 	border: solid 1px red;
 }
+
+/* .container div:nth-child(1) {
+	border: solid 1px red;
+} */
+
+/* .container div:nth-child(odd) {
+	border: solid 1px red;
+} */
+
 .container div:last-child {
 	border: solid 1px blue;
 }
+
+/* .container div:nth-child(2) {
+	border: solid 1px blue;
+} */
+
+/* .container div:nth-child(even) {
+	border: solid 1px blue;
+} */
 
 /*! This media query was making the boxes tiny lines when over 1200px, this is because you are giving it the display of inline, which you cannot add heights and width values to. Thats why they where deflating. The application works fine if you just take this component out. */
 /* @media (min-width: 1201px) {
@@ -43,8 +67,12 @@ body {
 } */
 
 @media (max-width: 500px) {
-	.container div {
+	/* .container div {
 		display: block;
 		width: auto;
+	} */
+
+	.container div {
+		width: 100%; /*? This should be all we need to turn the flex items into columns, we could additionally also just set flex-direction to column on the container class */
 	}
 }

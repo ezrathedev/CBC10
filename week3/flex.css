@@ -1,33 +1,40 @@
-*{
+* {
     box-sizing: border-box;
 }
+
 body{
     font-family: sans-serif;
     padding: 0;
     margin: 0;
     color:white;
 }
+
 li {
     padding: 60px;
 }
+.content h1 {
+    border-bottom: #fff;
 
-li:hover{
+}
+
+li:hover {
     color:lightblue;
     cursor: pointer;
 }
 
-nav{
+nav {
     /* display: flex; */
     align-content:flex-start;
     flex-direction: row ;
     position: fixed;
     width: 100%;
+    height:50px;
 }
-nav ul{
+nav ul {
     list-style-type: none; /*this is used to take the bullets away*/
     width:100%;
     margin:0 auto;
-    padding: 1.3em;
+    padding: 1.0rem;
     background: hsl(0, 0%, 20%);
     color: #fff;
     justify-content: center;
@@ -37,26 +44,26 @@ nav ul{
     height: 30px;
 }
 
-
-
-
 #showcase {
-height: 100vh;
-width: 100%;
-text-align: center;
-background-color:mediumseagreen;
-color:white;
-padding: 0 0 3rem 0;
-margin:0;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    background-color:mediumseagreen;
+    color:white;
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.info h1 {padding: 0 0 3rem 0;}
+.content h2 {
+    border-bottom: #fff 1px solid;
+    padding:0 0 0.5rem 0;
 }
 
 
-
-  .info-1 .content{
+.info-1 .content{
     width:50%;
     display: flex;
     flex-direction: column;
@@ -64,74 +71,67 @@ flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     height: 100%;
-   
-    
+    border-bottom: #fff ;
 }
+
 .info {
     height: 50vh;
+    width: 100%;
+    color:white;
+    display: flex;
 }
-
-
 
 .info-1 .img{
     background:url('https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
-    
-    align-items: flex-end;
     flex-basis: 50%;
-    height: 100%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    
 }
+
 .info-1 {
-     background-color: steelblue;
-     display: flex;
-     flex-direction: row;
-     align-items:flex-start;
-     /* height: 5; */
-    }
-    .info-2 {  
-        display: flex;
-        flex-direction: row;
-        align-items:flex-start;
-        background: firebrick;
-        height:50vh;
-        padding:0 1rem;}
-        
+    background-color: steelblue;
+    display: flex;
+}
+
+.info-2 {  
+    display: flex;
+    background: firebrick;
+    padding:0 1rem;
+}
 
 .info-2 .content{
-         
-         /* display: flex; */
-         flex-basis: 50%;
-         justify-content:center;
-         align-items: flex-start;
-         /* background-size: cover; */
-         height: 100%;
-         
-        }
-  .info-2 .img {
-   background: url('https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
-   align-items: flex-end;
-   display: flex;
-   flex-basis: 50%;
-   height: 100%;
-   background-position: center;
-   background-size: cover;
-   background-repeat: no-repeat;
-   
+    flex-basis: 50%;
+    justify-content:center;
+    align-items: flex-start;
+    border-bottom: #fff;
+    /* background-size: cover; */
+    height: 100%;
+}
+
+.info-2 .img {
+    background: url('https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+    align-items: flex-end;
+    display: flex;
+    flex-basis: 50%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 } 
 
-    footer {
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        background-color: #333333;
-        color: #fff;
-        padding:10px;
-        height:50%;
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333333;
+    color: #fff;
+    padding:10px;
+    height:50%;
+}
+        
+ @media (max-width: 500px) {
+    .info {
+        flex-direction: column;
     }
-        @media (max-width: 500px) {
-         body{
-            display: block;}
-        }
+} 

@@ -113,4 +113,4 @@ h2{
  @media (max-width: 500px) {
     .info {
         flex-direction: column;
- }
+ }}

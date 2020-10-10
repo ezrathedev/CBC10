@@ -65,6 +65,7 @@ h2{
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
 } 
 
  .info-2 .img{

@@ -1,138 +1,202 @@
+/*! I fixed the responsive stuff, and added some feedback in flex.html & flex.css. Most of the feedback is in flex.css, I would recommend breaking up your CSS styling into logical sections separated by comments. Make sure you're using flex-basis on flex-items and not width. If you just want to specify one side for margin, padding, border, etc you can just specify the side your working with. i.e. padding-bottom: 5px; margin-left: 10px; border-top: 1px dashed green; Overall great job keep up the great work! */
+
+/*===General Styles===*/
 * {
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-body{
-    font-family: sans-serif;
-    padding: 0;
-    margin: 0;
-    color:white;
+body {
+	font-family: sans-serif;
+	/* padding: 0;
+    margin: 0; */
+	/*? I like to reset margin and padding under the *, just a preference. */
+	color: white;
 }
 
 li {
-    padding: 60px;
+	padding: 60px;
 }
-.content h1 {
-    border-bottom: #fff;
 
+.content h1 {
+	border-bottom: #fff;
 }
 
 li:hover {
-    color:lightblue;
-    cursor: pointer;
+	color: lightblue;
+	cursor: pointer;
 }
 
+/*===Navigation Styles===*/
 nav {
-    /* display: flex; */
-    align-content:flex-start;
-    flex-direction: row ;
-    position: fixed;
-    width: 100%;
-    height:50px;
+	/* display: flex; */
+	align-content: flex-start;
+	flex-direction: row;
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	background: hsl(0, 0%, 20%); /*? Moved this from line 46 here, nice used of hsl( )! */
+	/*? Used to center the <ul> */
+	display: flex;
+	align-items: center;
 }
+
 nav ul {
-    list-style-type: none; /*this is used to take the bullets away*/
-    width:100%;
-    margin:0 auto;
-    padding: 1.0rem;
-    background: hsl(0, 0%, 20%);
-    color: #fff;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    height: 30px;
+	list-style-type: none; /*this is used to take the bullets away*/
+	width: 100%;
+	margin: 0 auto;
+	padding: 1rem;
+	/* background: hsl(0, 0%, 20%); */ /*? This is better placed on the <nav> as this makes the nav only appear to be 30px */
+	color: #fff;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	/* height: 30px; */ /*? Shouldn't need this anymore */
 }
 
+/*===Showcase Styles===*/
 #showcase {
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-    background-color:mediumseagreen;
-    color:white;
-    margin:0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+	height: 100vh;
+	width: 100%;
+	text-align: center;
+	background-color: mediumseagreen;
+	color: white;
+	/* margin: 0; */ /*? un-needed at this moment as we already set everything's default margin to 0 */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
-.info h1 {padding: 0 0 3rem 0;}
+
+/*! Forgot to add some margin on the bottom of the showcase heading, I threw that in */
+#showcase h1 {
+	margin-bottom: 1rem;
+}
+
 .content h2 {
-    border-bottom: #fff 1px solid;
-    padding:0 0 0.5rem 0;
+	border-bottom: #fff 1px solid;
+	/* padding: 0 0 0.5rem 0; */ /*? We can specify just padding-bottom instead of using the entire clockwise notation. */
+	padding-bottom: 0.5rem;
 }
 
-
-.info-1 .content{
-    width:50%;
-    display: flex;
-    flex-direction: column;
-    padding: 0 1rem ;
-    justify-content: center;
-    align-items: flex-end;
-    height: 100%;
-    border-bottom: #fff ;
-}
-
+/*===Info Styles===*/
 .info {
-    height: 50vh;
-    width: 100%;
-    color:white;
-    display: flex;
+	height: 50vh;
+	width: 100%;
+	color: white;
+	display: flex;
 }
 
-.info-1 .img{
-    background:url('https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
-    flex-basis: 50%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: silver 3px solid;
+.info h1 {
+	/*! There is no <h1> in the info section, however there is an <h2>. */
+	/* padding: 0 0 3rem 0; */ /*? We can specify just padding-bottom instead of using the entire clockwise notation. */
+	padding-bottom: 1rem;
+}
+
+/*===Info #1 Styles===*/
+.info-1 .content {
+	/* width: 50%; */ /*! You should use flex-basis instead of width here */
+	flex-basis: 50%;
+	display: flex;
+	flex-direction: column;
+	padding: 0 1rem;
+	justify-content: center;
+	align-items: flex-end;
+	text-align: right; /*! I had instructions to align text to justify, however I think this is a little better. */
+	/* height: 100%; */ /*? This is whats breaking the responsive view, its un-needed for the normal view */
+	border-bottom: #fff;
+}
+
+.info-1 .img {
+	background: url('https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+	flex-basis: 50%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	/* border: silver 3px solid; */
 }
 
 .info-1 {
-    background-color: steelblue;
-    display: flex;
+	background-color: steelblue;
+	/* display: flex; */ /*! Not needed because .info already has display: flex; */
 }
 
-.info-2 {  
-    display: flex;
-    background: firebrick;
-    padding:0 1rem;
-}
-
-.info-2 .content{
-    flex-basis: 50%;
-    justify-content:center;
-    align-items: flex-start;
-    border-bottom: #fff;
-    /* background-size: cover; */
-    height: 100%;
+/*===Info #2 Styles===*/
+.info-2 .content {
+	/* width: 50%; */ /*! You want to use flex-basis instead of width on flex-items as it just plays better. This was causing that gap on the top of the image. */
+	flex-basis: 50%;
+	display: flex;
+	flex-direction: column;
+	padding: 0 1rem;
+	justify-content: center;
+	align-items: flex-start;
+	text-align: left; /*! I had instructions to align text to justify, however I think this is a little better. */
+	/* height: 100%; */ /*? This is whats breaking the responsive view, its un-needed for the normal view */
+	border-bottom: #fff;
 }
 
 .info-2 .img {
-    background: url('https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
-    align-items: flex-end;
-    display: flex;
-    flex-basis: 50%;
-    height: 100%;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-} 
-
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #333333;
-    color: #fff;
-    padding:10px;
-    height:50%;
+	background: url('https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+	flex-basis: 50%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: silver 3px solid; /*? I assume this is for testing however I didn't want to remove it in case you wanted to leave it. */
 }
-        
- @media (max-width: 500px) {
-    .info {
-        flex-direction: column;
-    }
-} 
+
+.info-2 {
+	background-color: firebrick;
+	/* display: flex; */ /*! Not needed because .info already has display: flex; */
+}
+
+/*! Removing these styles as they where different would be easier to just re-create the same working info #1 styles and just change the few values that are different between the two. */
+/* .info-2 {
+	display: flex;
+	background: firebrick;
+	padding: 0 1rem;
+}
+
+.info-2 .content {
+	flex-basis: 50%;
+	justify-content: center;
+	align-items: flex-start;
+	border-bottom: #fff;
+	background-size: cover;
+	height: 100%;
+}
+
+.info-2 .img {
+	background: url('https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+	align-items: flex-end;
+	display: flex;
+	flex-basis: 50%;
+	height: 100%;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+} */
+
+/*===Footer Styles===*/
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #333333;
+	color: #fff;
+	padding: 10px;
+	/* height: 50%; */ /*! You don't want to set this to a percentage as the parent container is the <body> and you don't want to use anything other than vh, vw, rems (maybe), and px */
+	height: 50px;
+}
+
+/*===Media Queries===*/
+@media (max-width: 500px) {
+	.info {
+		flex-direction: column;
+	}
+
+	.info-2 {
+		flex-direction: column-reverse;
+	}
+}

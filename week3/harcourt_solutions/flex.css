@@ -1,0 +1,135 @@
+/* General */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+/* nav styles */
+nav {
+	height: 50px;
+	width: 100%;
+	background: #333;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+nav ul li {
+	padding: 0 2rem;
+}
+
+/* showcase */
+#showcase {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 0 3rem;
+	text-align: center;
+	background: mediumseagreen;
+	color: white;
+}
+
+#showcase h1 {
+	margin-bottom: 1rem;
+}
+
+/* info */
+.info {
+	display: flex;
+	height: 50vh;
+	width: 100%;
+	color: white;
+}
+
+.info .img {
+	flex-basis: 50%;
+}
+
+.info .content {
+	flex-basis: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1rem;
+	text-align: justify;
+}
+
+.info .content h2 {
+	border-bottom: 1px solid white;
+	margin-bottom: 0.5rem;
+}
+
+/* info-1 & info-2 */
+.info-1 {
+	background: steelblue;
+}
+
+.info-1 .content {
+	align-items: flex-end;
+}
+
+.info-1 .img {
+	background: url('https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.info-2 {
+	background: firebrick;
+}
+
+.info-2 .content {
+	align-items: flex-start;
+}
+
+.info-2 .img {
+	background: url('https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+/* footer */
+footer {
+	height: 50px;
+	background: #333;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* media queries */
+@media (max-width: 500px) {
+	.info {
+		flex-direction: column;
+	}
+
+	.info .content {
+		align-items: center;
+		text-align: center;
+	}
+
+	.info-2 {
+		flex-direction: column-reverse;
+	}
+}

@@ -28,5 +28,6 @@ console.log(arr); // should result in 1 ,a ,b, c ,d ,e, g.
 arr.splice(2, 3,['cat','dog','rabbit']);
 console.log(arr);
 
-var copied = arr[0,1,2];
+var copied = arr.slice(0, 3);
 console.log(copied);
+console.log(copied[2][1])

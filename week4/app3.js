@@ -38,5 +38,7 @@ if(game.win > game.lose){
     console.log('tied game');
 } else if (game.lose > game.win) {
     result += bot2 + ' beats ' + bot1;
+} else {
+    console.log('error');
 }
 console.log(result);

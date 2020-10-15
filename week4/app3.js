@@ -13,24 +13,8 @@ var bot2 = choices[random2];
 
 console.log('bot1: ',bot1); // this should return rock, paper , or scissors
 console.log('bot2: ',bot2);
-// switch(bot1 === bot2) {
-//     case bot1 < bot2:
-//         game.lose = game.lose += 1;
-//         break
-    
-//     case bot1 >= bot2:
-//         game.win = game.win += 1;
-//         break
 
-//     case bot1 === bot2:
-//         console.log('tie game');
-//         break
-// }
-// if(bot1 === 1 & bot2 === 3){
-//     game.win += 1;
-//     console.log(game);
-// }
-
+var result = '';
 if (bot1 === choices[0] & bot2 === choices[0]){
     console.log('tied game both pick rock'); // both choose rock
 } else if (bot1 === choices[1] &  bot2 === choices[1]) {
@@ -46,7 +30,7 @@ if (bot1 === choices[0] & bot2 === choices[0]){
 }else if (bot1 === choices[0] &  bot2 === choices[2]){
     console.log('rock beats scissors')  
 } 
-var result = '';
+
 
 if(game.win > game.lose){
     result = bot1 + " beats " + bot2;

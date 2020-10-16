@@ -42,7 +42,7 @@ if (bot1 === choices[0] & bot2 === choices[0]){
 
 
 if(game.win > game.lose){
-    result += bot1 + " beats " + bot2;
+    result = result += bot1 + " beats " + bot2;
     console.log(result);
    
 }else if(game.win === game.lose){

@@ -26,23 +26,23 @@ if (bot1 === choices[0] & bot2 === choices[0]){
     game.win += 1;
 } else if(bot1 === choices[2] && bot2 === choices[1]){
     console.log('scissors beats paper');
-    game.win = game.win += 1;
+    game.win += 1;
 }else if (bot1 === choices[0] && bot2 === choices[2]){
     console.log('rock beats scissors')  
+    game.win += 1;
 }  else if (bot2 === choices[1] &&  bot1 === choices[0]){
     console.log('paper beats rock');  
     game.lose += 1;
 } else if(bot2 === choices[2] && bot1 === choices[1]){
     console.log('scissors beats paper');
-    game.lose = game.lose += 1;
+    game.lose += 1;
 }else if (bot2 === choices[0] && bot1 === choices[2]){
     console.log('rock beats scissors')  
-    game.lose = game.lose += 1;
+    game.lose += 1;
 } 
 
-
 if(game.win > game.lose){
-    result = result += bot1 + " beats " + bot2;
+    result += bot1 + " beats " + bot2;
     console.log(result);
 }else if(game.win === game.lose){
     console.log('tied game');

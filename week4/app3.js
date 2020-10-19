@@ -44,9 +44,9 @@ if (bot1 === choices[0] & bot2 === choices[0]){
 if(game.win > game.lose){
     result = result += bot1 + " beats " + bot2;
     console.log(result);
-   
 }else if(game.win === game.lose){
     console.log('tied game');
+    result += 'tied game'
 } else if (game.lose > game.win) {
     result = result += bot2 + ' beats ' + bot1;
     console.log(result);

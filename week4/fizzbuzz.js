@@ -7,7 +7,7 @@ if(i % 3){
     console.log('string');
 }else if(i % 5 == 0){
     console.log('buzz');
-}else if(i % 5 == 0 && i % 3 == 0){
+}else if(i % 5 == 5 && i % 3 == 15){
     console.log('fizzbuzz');
 } else{
     console.log('error');

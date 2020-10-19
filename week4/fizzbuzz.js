@@ -4,11 +4,14 @@ for (var i = 0; i < 101; i++){
 
 // if statements var's are global..
 if(i % 3){
-    console.log('fuzz');
-}else if(i % 5 ){
+    console.log('fuzz'); {
+
+} if(i % 5 ){
     console.log('buzz');
-}else if(i % 5 && i % 3){
-    console.log('fizzbuzz');
-} else{
-    console.log('error');
-} }
+    {
+        if(i % 5 && i % 3){
+            console.log('fizzbuzz');
+            
+    }{
+        
+    }}}}}

@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script src="var.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <div>
-            <i class="far fa-user-circle"></i>
-        </div>
-    </header>
-    <form class="form">
-    <h1>Login</h1>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Styles -->
+		<link rel="stylesheet" href="styles.css" />
+		<!-- Scripts -->
+		<script src="scripts.js" defer></script>
+		<!-- Font Awesome -->
+		<script
+			src="https://kit.fontawesome.com/47ace9daa2.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Document</title>
+	</head>
+	<body>
+		<nav>
+			<span id="user"></span>
+			<i class="fas fa-user"></i>
+		</nav>
 
-    <label for="username" id='userLabel'>username</label>
-    <input type="text" id="username" name="username" placeholder="username" required>
+		<form action="">
+			<h1>Login</h1>
 
-    <label for="password" id=passLabel>password</label>
-    <input type="password" name="password" id="password" placeholder="password" required>
+			<label for="username">Username</label>
+			<input id="username" type="text" />
 
-    <label for="checkbox" id="Me">Remember me</label>
-    <input type="checkbox" name="checkbox" id="checkbox">
-    
-    <button type='submit'id='submit' onclick="">sign in</button>
-    <p>don't have an account? <a href="">sign up</a></p>
-    <a href="">Forgot password?</a> 
-</form>
-</body>
+			<label for="password">Password</label>
+			<input id="password" type="password" />
+
+			<div id="remember">
+				<input type="checkbox" id="checkbox" />
+				<label for="checkbox">Remember me</label>
+			</div>
+
+			<button type="submit">Sign In</button>
+
+			<p>Don't have an account? <span class="blue">Sign up</span></p>
+			<p><span class="blue">Forgot Password?</span></p>
+		</form>
+	</body>
 </html>

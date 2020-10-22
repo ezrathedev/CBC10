@@ -3,7 +3,7 @@ var username = document.getElementById('username');
 var user = document.getElementById('user');
 var password = document.getElementById('password');
 var submit = document.getElementById('input[type=submit]');
-var  userLabel = ''; //line 6
+var  userLabel = ''; //line 6  // use .value ?
 var passlabel = ''; // line 7
 var rememberMe = document.querySelector('input[type=checkbox]');
 var submitBtn = document.getElementById('submit'); // line 9

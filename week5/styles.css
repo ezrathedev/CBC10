@@ -19,8 +19,6 @@ body {
 	border-color: steelblue !important;
 }
 
-<<<<<<< HEAD
-=======
 .error {
 	border-color: red;
 }
@@ -46,7 +44,6 @@ nav * {
 	margin-right: 1rem;
 }
 
->>>>>>> 387079c2fd8bcf4acc55f00a0db9b5f868931d92
 form {
 	width: 25%;
 	display: flex;

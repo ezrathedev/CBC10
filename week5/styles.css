@@ -10,8 +10,8 @@ header{
     height:50px;
     
 }
-body {
-
+h1 {
+    flex:flex-start;
 }
 form {
     display: flex;
@@ -46,4 +46,12 @@ input{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+a:hover {
+    color:white;
+    background-color: darkblue;
+}
+a {
+    color: blue;
 }

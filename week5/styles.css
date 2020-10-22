@@ -10,9 +10,7 @@ header{
     height:50px;
     
 }
-h1 {
-    flex:flex-start;
-}
+
 form {
     display: flex;
     flex-direction: column;

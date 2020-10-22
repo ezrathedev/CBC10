@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="app.js"></script>
+    <script src="var.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -16,20 +16,18 @@
     <form class="form">
     <h1>Login</h1>
 
-    <label for="username">username</label>
+    <label for="username" id='userLabel'>username</label>
     <input type="text" id="username" name="username" placeholder="username" required>
 
-    <label for="password">password</label>
+    <label for="password" id=passLabel>password</label>
     <input type="password" name="password" id="password" placeholder="password" required>
 
-    <label for="checkbox">Remember me</label>
+    <label for="checkbox" id="Me">Remember me</label>
     <input type="checkbox" name="checkbox" id="checkbox">
     
-    <button type='submit'id='submit' onclick="foo()">sign in</button>
+    <button type='submit'id='submit' onclick="">sign in</button>
     <p>don't have an account? <a href="">sign up</a></p>
     <a href="">Forgot password?</a> 
-    
-
 </form>
 </body>
 </html>

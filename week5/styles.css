@@ -12,11 +12,11 @@ body {
 }
 
 .blue {
-	color: steelblue !important;
+	color: blue ;
 }
 
 .blue-border {
-	border-color: steelblue !important;
+	border-color: blue  ;
 }
 
 .error {

@@ -62,7 +62,7 @@ submitBtn.addEventListener('click', function(e){
         username.classList.add('error');
         userLabel.classList.add('error');
         password.classList.add('error');
-        passLabel.classList.add('error');
+        passLabel.classList.add('label','error');
         // find a way to link the two together. 
     } else if (user.value === ''){
         username.classList.add('error');
@@ -84,16 +84,7 @@ submitBtn.addEventListener('click', function(e){
 
     }
     
-    // this worked
 
 })
 
-
-
-// iv) Set the disabled attribute on username & password 
-
-// if (true) {
-//  // this should go to the nav bar
-//  user += getElementById('user').innerHTML ='<H1> + username + </h1>';
-// }
 

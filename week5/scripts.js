@@ -19,7 +19,7 @@ username.addEventListener('focus', function(){
 });
 
 username.addEventListener('blur', function(){
-    //  // use classlist .rmove to remove the styles from the input
+ // use classlist .rmove to remove the styles from the input
     username.classList.remove('blue-border');
     userLabel.classList.remove('blue');
     
@@ -50,19 +50,50 @@ password.addEventListener('blur', function(){
 rememberMe.addEventListener('change', function(){
     // use classlist .add to add style to the input box !
     if(rememberMe.checked){
-        alert('event fired!');// this works 
+        alert('we will save your password!');// this works 
+    
     }
 });
 
 submitBtn.addEventListener('click', function(e){
-    console.log('event fired!');
-    if(username.value === ''){
+    e.preventDefault()
+    
+    if(username.value === '' && password.value === ''){
         username.classList.add('error');
         userLabel.classList.add('error');
-    } 
-    if(password.value === ''){
         password.classList.add('error');
         passLabel.classList.add('error');
-    } // this worked
-    e.preventDefault;
-});
+        // find a way to link the two together. 
+    } else if (user.value === ''){
+        username.classList.add('error');
+        userLabel.classList.add('error');
+    } else if (password.value === '') {
+        password.classList.add('error');
+        passLabel.classList.add('error');
+
+    } else {
+        userLabel.classList.remove('error');
+        passLabel.classList.remove('error');
+        password.classList.remove('error');
+        username.classList.remove('error');
+        user.innerHTML = username.value;
+        username.value = '';
+        password.value = '';  
+        password.disabled = true;
+        username.disabled = true; 
+
+    }
+    
+    // this worked
+
+})
+
+
+
+// iv) Set the disabled attribute on username & password 
+
+// if (true) {
+//  // this should go to the nav bar
+//  user += getElementById('user').innerHTML ='<H1> + username + </h1>';
+// }
+

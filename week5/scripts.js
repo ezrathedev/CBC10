@@ -35,7 +35,6 @@ password.addEventListener('focus', function(e){
     } //! this works
 
 });
-
 password.addEventListener('blur', function(){
     // use classlist .remove to remove the styles from the input
     password.classList.remove('blue-border');
@@ -50,19 +49,26 @@ password.addEventListener('blur', function(){
 rememberMe.addEventListener('change', function(){
     // use classlist .add to add style to the input box !
     if(rememberMe.checked){
-        alert('event fired!');// this works 
+        alert('We will remember your username');// this works 
     }
 });
 
 submitBtn.addEventListener('click', function(e){
     console.log('event fired!');
-    if(username.value === ''){
+    if(username.value === true){
         username.classList.add('error');
-        userLabel.classList.add('error');
+        // user.innerHTML += username;
+        // userLabel.classList.add('error');
+        
     } 
     if(password.value === ''){
         password.classList.add('error');
         passLabel.classList.add('error');
     } // this worked
+    if(username.value === '' | password.value === ''){
+        alert('somethings not right, try to login again');
+    }
     e.preventDefault;
 });
+
+

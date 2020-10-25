@@ -16,6 +16,7 @@
 	</head>
 	<body>
 		<nav>
+			<button id="logout">Logout</button>
 			<span id="user"></span>
 			<i class="fas fa-user"></i>
 		</nav>
@@ -23,11 +24,11 @@
 		<form action="">
 			<h1>Login</h1>
 
-			<label for="username">Username</label>
-			<input id="username" type="text" />
+			<label for="username" >Username</label>
+			<input id="username" type="text" pattern="(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,15})$" />
 
 			<label for="password">Password</label>
-			<input id="password" type="password" />
+			<input id="password" type="password" pattern="^([a-zA-Z0-9@*#]{6,10})$" />
 
 			<div id="remember">
 				<input type="checkbox" id="checkbox" />

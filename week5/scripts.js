@@ -8,6 +8,7 @@ var passLabel = document.querySelector('label[for=password]');
 var rememberMe = document.querySelector('input[type=checkbox]');
 var submitBtn = document.querySelector('button[type=submit]'); // line 9
 
+
 username.addEventListener('focus', function(){
     username.classList.add('blue-border');
     userLabel.classList.add('blue');
@@ -56,7 +57,7 @@ rememberMe.addEventListener('change', function(){
 });
 
 submitBtn.addEventListener('click', function(e){
-    e.preventDefault()
+    // e.preventDefault()
     
     if(username.value === '' && password.value === ''){
         username.classList.add('error');
@@ -77,14 +78,16 @@ submitBtn.addEventListener('click', function(e){
         password.classList.remove('error');
         username.classList.remove('error');
         user.innerHTML = username.value;
-        username.value = '';
-        password.value = '';  
-        password.disabled = true;
-        username.disabled = true; 
-
+        // username.value = '';
+        // password.value = '';  
+        // password.disabled = true;
+        // username.disabled = true; 
     }
-    
+    s
+    submitBtn.addEventListener('checked' => (){
+        localStorage.setItem()
+
+    })
 
 })
-
 

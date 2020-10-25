@@ -56,7 +56,7 @@ rememberMe.addEventListener('change', function(){
 });
 
 submitBtn.addEventListener('click', function(e){
-    e.preventDefault()
+    e.preventDefault() // removed so we can do validation.
     
     if(username.value === '' && password.value === ''){
         username.classList.add('error');

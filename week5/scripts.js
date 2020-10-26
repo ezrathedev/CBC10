@@ -1,4 +1,3 @@
-
 var username = document.querySelector('#username');
 var user = document.querySelector('#user');
 var password = document.querySelector('#password');
@@ -57,8 +56,6 @@ rememberMe.addEventListener('change', function(){
 });
 
 submitBtn.addEventListener('click', function(e){
-    // e.preventDefault()
-    
     if(username.value === '' && password.value === ''){
         username.classList.add('error');
         userLabel.classList.add('error');
@@ -68,26 +65,21 @@ submitBtn.addEventListener('click', function(e){
     } else if (user.value === ''){
         username.classList.add('error');
         userLabel.classList.add('error');
-    } else if (password.value === '') {
+    } else if (password.value === 'click') {
         password.classList.add('error');
         passLabel.classList.add('error');
-
-    } else {
+    }else if (username.value !=='' & password.value !== ''){
+        localStorage.setItem('username', username.value);
+    } else{
         userLabel.classList.remove('error');
         passLabel.classList.remove('error');
         password.classList.remove('error');
         username.classList.remove('error');
-        user.innerHTML = username.value;
-        // username.value = '';
-        // password.value = '';  
-        // password.disabled = true;
-        // username.disabled = true; 
+        localStorage.removeItem('name');
+        user.innerHTML = username.value; // alter this if the username and password isn't blank
+        localStorage.removeItem('username');
+        // localStorage.setItem('username', username.value);
+        console.log(localStorage);
     }
-    s
-    submitBtn.addEventListener('checked' => (){
-        localStorage.setItem()
-
-    })
-
 })
 

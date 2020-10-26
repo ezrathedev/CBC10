@@ -2,11 +2,11 @@ var username = document.querySelector('#username');
 var user = document.querySelector('#user');
 var password = document.querySelector('#password');
 var submit = document.getElementById('input[type=submit]');
-var  userLabel = document.querySelector('label[for=username]'); //line 6  // use label[for=username]
+var userLabel = document.querySelector('label[for=username]'); //line 6  // use label[for=username]
 var passLabel = document.querySelector('label[for=password]'); 
 var rememberMe = document.querySelector('input[type=checkbox]');
 var submitBtn = document.querySelector('button[type=submit]'); // line 9
-
+var logout = document.getElementById('logout');
 
 username.addEventListener('focus', function(){
     username.classList.add('blue-border');
@@ -52,7 +52,7 @@ rememberMe.addEventListener('change', function(){
     if(rememberMe.checked){
         alert('we will save your password!');// this works 
     
-    }
+    } 
 });
 
 submitBtn.addEventListener('click', function(e){
@@ -62,24 +62,38 @@ submitBtn.addEventListener('click', function(e){
         password.classList.add('error');
         passLabel.classList.add('label','error');
         // find a way to link the two together. 
-    } else if (user.value === ''){
+    } else if (username.value === ''){
         username.classList.add('error');
         userLabel.classList.add('error');
     } else if (password.value === 'click') {
         password.classList.add('error');
         passLabel.classList.add('error');
-    }else if (username.value !=='' & password.value !== ''){
-        localStorage.setItem('username', username.value);
     } else{
+        if(rememberMe.checked ){
+            localStorage.setItem('username', username.value);
+            sessionStorage.setItem('username', username.value);
+        } else{localStorage.removeItem('username')}
         userLabel.classList.remove('error');
         passLabel.classList.remove('error');
         password.classList.remove('error');
         username.classList.remove('error');
-        localStorage.removeItem('name');
-        user.innerHTML = username.value; // alter this if the username and password isn't blank
-        localStorage.removeItem('username');
-        // localStorage.setItem('username', username.value);
         console.log(localStorage);
     }
 })
 
+window.addEventListener('load', function(){
+    if(localStorage.getItem('username') !== null ){
+        username.value = localStorage.getItem('username');
+        rememberMe.checked = true;
+    }
+})
+
+// if(sessionStorage != null){
+//     user.innerHTML += localStorage.getItem('username');
+// }
+
+logout.addEventListener('click', function(){
+    sessionStorage.clear();
+    window.location.replace('index.html');
+    
+})

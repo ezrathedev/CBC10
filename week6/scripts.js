@@ -83,9 +83,5 @@ for (const arrs of arr) {
     console.log(arrs); // car go fast
 }
 
-for (const keys in obj) {
-    if (obj.hasOwnProperty(keys)) {
-        const element = obj[keys];
-        
-    }
-}
+for (const [key, value] of Object.entries(obj)) {
+    console.log(`${key}: ${value}`)};

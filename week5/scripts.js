@@ -7,7 +7,7 @@ var passLabel = document.querySelector('label[for=password]');
 var rememberMe = document.querySelector('input[type=checkbox]');
 var submitBtn = document.querySelector('button[type=submit]'); // line 9
 var logout = document.getElementById('logout');
-
+var error = document.getElementsByClassName('error');
 username.addEventListener('focus', function(){
     username.classList.add('blue-border');
     userLabel.classList.add('blue');
@@ -65,18 +65,20 @@ submitBtn.addEventListener('click', function(e){
     } else if (username.value === ''){
         username.classList.add('error');
         userLabel.classList.add('error');
-    } else if (password.value === 'click') {
+    } else if (password.value === '') {
         password.classList.add('error');
         passLabel.classList.add('error');
     } else{
         if(rememberMe.checked ){
             localStorage.setItem('username', username.value);
-            sessionStorage.setItem('username', username.value);
+            
         } else{localStorage.removeItem('username')}
         userLabel.classList.remove('error');
+        sessionStorage.setItem('username', username.value);
         passLabel.classList.remove('error');
         password.classList.remove('error');
         username.classList.remove('error');
+        // localStorage.removeItem('username'
         console.log(localStorage);
     }
 })
@@ -86,9 +88,12 @@ window.addEventListener('load', function(){
         username.value = localStorage.getItem('username');
         rememberMe.checked = true;
     }
-})
+    if(sessionStorage.getItem('username')!== null){
+        user.innerHTML = sessionStorage.getItem('username');
+        // rememberMe.checked = false;
+}});
 
-// if(sessionStorage != null){
+// if(sessionStorage !== 'null'){
 //     user.innerHTML += localStorage.getItem('username');
 // }
 

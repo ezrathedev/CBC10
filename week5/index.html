@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Styles -->
+		<link rel="stylesheet" href="styles.css" />
+		<!-- Scripts -->
+		<script src="scripts.js" defer></script>
+		<!-- Font Awesome -->
+		<script
+			src="https://kit.fontawesome.com/47ace9daa2.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Document</title>
+	</head>
+	<body>
+		<nav>
+			<button id="logout">Logout</button>
+			<span id="user"></span>
+			<i class="fas fa-user"></i>
+		</nav>
+
+		<form action="">
+			<h1>Login</h1>
+
+			<label for="username" >Username</label>
+			<input id="username" type="text" pattern="(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,15})$" />
+
+			<label for="password">Password</label>
+			<input id="password" type="password" pattern="^([a-zA-Z0-9@*#]{6,10})$" />
+
+			<div id="remember">
+				<input type="checkbox" id="checkbox" />
+				<label for="checkbox">Remember me</label>
+			</div>
+
+			<button type="submit" >Sign In</button>
+
+			<p>Don't have an account? <span class="blue">Sign up</span></p>
+			<p><span class="blue">Forgot Password?</span></p>
+		</form>
+	</body>
+</html>

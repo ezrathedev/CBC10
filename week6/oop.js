@@ -29,3 +29,12 @@ console.log(employee.employeeId);
 
 console.log(Employee.getCompanyName());
 
+
+class Manager extends Employee{
+    constructor(name, age employeeId){
+        super(name, age, employeeId)
+
+    }
+    
+
+}

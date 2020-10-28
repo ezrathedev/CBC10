@@ -7,7 +7,7 @@ class Person {
 }
 // this is an instance!
 const person = new Person('Ezra Hampton', 28); 
-console.log(this.name); // gets the name of the object.
+console.log(person.name); // gets the name of the object.
 
 console.log(person.name); // name
 console.log(person.age); // age

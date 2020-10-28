@@ -2,11 +2,30 @@
 class Person {
     constructor(name, age) {
         this.name = name;
-        this.age = age;}
+        this.age = age;
     }
-    const getName = new Person('Ezra Hampton', 28); 
-    console.log(getName.name); // gets the name of the object.
-    console.log(getName); // gives me name and age
+}
+// this is an instance!
+const person = new Person('Ezra Hampton', 28); 
+console.log(this.name); // gets the name of the object.
+
+console.log(person.name); // name
+console.log(person.age); // age
 
 
+// Create an employee class that inherits from the person class. 
+class Employee extends Person {
+    constructor(name, age, employeeId){
+        super(name,age)
+        this.employeeId = employeeId;
+    }
+
+    static getCompanyName() {
+        return 'Web Development Solutions Incorporated';
+    }
+}
+const employee = new Employee('ezra', 28, 90872)
+console.log(employee.employeeId);
+
+console.log(Employee.getCompanyName());
 

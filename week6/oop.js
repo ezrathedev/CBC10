@@ -31,15 +31,14 @@ console.log(Employee.getCompanyName()); // returns web developement solutions in
 
 // on number 3.
 class Manager extends Employee{
-    constructor(name, age,employeeId){
+    constructor(name, age,employeeId, employee){
         super(name, age, employeeId)
-
-
+        this.employee = employee;
     }
-    newEmployee(){
-        return this.employeeId;
+    
+    static manager = new Manager('Ezra',28,29392,'ezra')
+    newEmployee() {
+        return this.employee;
     }
-
+    
 }
-const manager = new Manager('Ezra Hampton', 28, )
-console.log(Employee.newEmployee); // returns undefined fix

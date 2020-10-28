@@ -25,16 +25,21 @@ class Employee extends Person {
     }
 }
 const employee = new Employee('ezra', 28, 90872)
-console.log(employee.employeeId);
+console.log(employee.employeeId); // returns the employee ic
 
-console.log(Employee.getCompanyName());
+console.log(Employee.getCompanyName()); // returns web developement solutions incorporated.
 
-
+// on number 3.
 class Manager extends Employee{
-    constructor(name, age employeeId){
+    constructor(name, age,employeeId){
         super(name, age, employeeId)
 
+
     }
-    
+    newEmployee(){
+        return this.employeeId;
+    }
 
 }
+const manager = new Manager('Ezra Hampton', 28, )
+console.log(Employee.newEmployee); // returns undefined fix

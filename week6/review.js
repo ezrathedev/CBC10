@@ -21,6 +21,7 @@ console.log(parseInt(var4));
 let arr = [];
 // 10) write a for loop that adds 1 - 10 onto the array. The resutling array should be arr = [1,2,3...9, 10]; HINT: you'll start at 1 instead of 0 inside the code block of the for loop we want to use the push method, you can use anything you like the that creates the desired end result;
 for(var i =1; i <= 10; i++){
+    // arr[i] = i;
     arr[i] = i;
 }
 console.log(arr);
@@ -37,11 +38,13 @@ console.log(arr);
 arr.shift(); // should remove the zero from the begining of the array
 console.log(arr);
 // 15) use splice to remove the first element of our array. resutls should be arr = [2,3..9,10] HINT: takes three parameters the first is starting index, the second is how many elements, all the following parameters are things to add in after the elements specified to be removed are removed, if any are. 
-arr.splice() // finish this and remove the comment 
+arr.splice(0,1); // removed an empty slot ?? should remove 1
+console.log(arr);
 // 16) use splice to remove the last two elements of the array. results should be arr = [2,3..7,8] HINT: the index of the next to last element would be ()arr.length - 2)
-
+arr.splice(arr.length -1, 10 ,8 )
+console.log(arr);// this should be right.
 // 17) use splice to add -1, 0, 1 onto the front of our array. results should be arr = [-1,0,1,2,3...7,8];
-
+arr.splice();
 // 18) use slice to make a new array called copy, it should have the first 3 elements in copy. results should look like arr = [-1,0,1,2,3...7,8] (unchanged) and copy = [-1,0,1]
 let copy = arr.slice(0, 4);
 console.log(copy);

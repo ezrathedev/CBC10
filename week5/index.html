@@ -1,3 +1,4 @@
+<!--! Overall great work, everything worked as it is supposed to. I made a few adjustments on areas I think could be improved in both index.html & scripts.js -->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -24,18 +25,32 @@
 		<form action="">
 			<h1>Login</h1>
 
-			<label for="username" >Username</label>
-			<input id="username" type="text" pattern="(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,15})$" required/>
+			<label for="username">Username</label>
+			<!--! The pattern here doesn't work for "username", which should be acceptable added in a new one that validates all alphanumeric characters between 6 - 15 -->
+			<!-- <input
+				id="username"
+				type="text"
+				pattern="(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,15})$"
+				required
+			/> -->
+			<input id="username" type="text" pattern="^[A-Za-z0-9]{6,15}$" required />
+			<!--? Could have also used minlength="6" maxlength="15" -->
 
 			<label for="password">Password</label>
-			<input id="password" type="password" pattern="^([a-zA-Z0-9@*#]{6,10})$" required />
+			<input
+				id="password"
+				type="password"
+				pattern="^([a-zA-Z0-9@*#]{6,10})$"
+				required
+			/>
+			<!--? Could have also used minlength="6" maxlength="10" -->
 
 			<div id="remember">
 				<input type="checkbox" id="checkbox" />
 				<label for="checkbox">Remember me</label>
 			</div>
 
-			<button type="submit" >Sign In</button>
+			<button type="submit">Sign In</button>
 
 			<p>Don't have an account? <span class="blue">Sign up</span></p>
 			<p><span class="blue">Forgot Password?</span></p>

@@ -18,7 +18,7 @@
 // }
 // }
 // }
-
+// made it look cleaner with shorthand
 for (var i=0; i < 101; i++){
     (i % 15 == 0) ? console.log(i + " : fizzbuzz"):
     (i % 3 == 0) ? console.log(i + ": fizz"):

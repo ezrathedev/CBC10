@@ -4,25 +4,25 @@ let var1;
 // 2) assign a value to var1 of to the string of 'string'
 var1 = 'string';
 // 3) declare and assign a new variable named var2 to the "g" from var1 using square bracket notation
-let var2 = var1.indexOf('g');
+let var2 = var1[5];
 console.log(var2);
 // 4) append the string text "o!" onto var2 
-var2 += 'o!';
+var2 += 'o!'; // should be right
 console.log(var2); //! come back to this!!
 // 5) create a variable named var3 assign it to any value of type number
-let var3 = 0;
+let var3 = 5;
 // 6) create a variable named var4 assign it to a string type the value should be a number character. Example: var var4 = "5";
 let var4 = '3';
 // 7) write the result of var3 + var4 to the console or the document. You should see the concatenation of var3 + var4
 console.log(var3 + var4);
 // 8) Write to the console or document using parseFloat || parseInt (depending on whether you are dealing with decimal or an integer) the sum of var3 and var4. Example: CORRECT: 5 + 5 = 10 INCORRECT: 5 + 5 = 55 basically not concatenation 
-console.log(parseInt(var4));
+console.log(parseInt(var4 + var3));
 // 9) Create a variable named arr with the value of an empty array
 let arr = [];
 // 10) write a for loop that adds 1 - 10 onto the array. The resutling array should be arr = [1,2,3...9, 10]; HINT: you'll start at 1 instead of 0 inside the code block of the for loop we want to use the push method, you can use anything you like the that creates the desired end result;
 for(var i =1; i <= 10; i++){
-    // arr[i] = i;
     arr[i] = i;
+    console.log(arr[i]);
 }
 console.log(arr);
 // 11) Add 11 on to the end of our array with an array method. result should look like this arr = [1,2,3,...9,10,11] HINT: push

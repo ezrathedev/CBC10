@@ -27,14 +27,14 @@ console.log(obj.name);
 // 12) Write the name property of the me object to the console/document using square bracket notation 
 console.log(obj['name']);
 // 13) Append a canDrink property to your me object with true or false as the value 
-obj.canDrink = true;
+obj.name += obj['canDrink'] = true;
 console.log(obj.name); // returns ezra HamptonTrue
 console.log(obj); // looking at the whole object.
 // 14) append a method onto our me object named greet, the value should be an anonymous function that should write `Hello my name is ${this.name}!`
 const greet = () => {
     return `Hello my name is ${obj.name}`; // returns my name with a book value
 }
-console.log(greet(this.name));
+console.log(greet());
 // 15) call your greet method
 greet();
 // 16) write an if statemnt that checks if me.name includes an "e". If true should write to the console/document "Your name contains an e". If false should write to the console/document "Your name does NOT contain an E" EXAMPLE: my name is harcourt therefore should print "Your name does NOT contain an E" to the console or document. You'll want to use the include string method 

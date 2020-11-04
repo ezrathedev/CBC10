@@ -27,7 +27,7 @@ console.log(obj.name);
 // 12) Write the name property of the me object to the console/document using square bracket notation 
 console.log(obj['name']);
 // 13) Append a canDrink property to your me object with true or false as the value 
-obj.canDrink = true;
+obj['canDrink'] = true;
 console.log(obj.name); // returns ezra HamptonTrue
 console.log(obj); // looking at the whole object.
 // 14) append a method onto our me object named greet, the value should be an anonymous function that should write `Hello my name is ${this.name}!`
@@ -49,3 +49,5 @@ if(obj.hasOwnProperty('canDrink')) {
         console.log(`${obj.name} cannot drink`);
     }
 }
+
+console.log(obj)

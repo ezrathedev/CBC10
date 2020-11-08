@@ -1,20 +1,19 @@
-class Person{
-    constructor(name, age, gender){
-      this.name = name;
-      this.age = age;
-      this.gender = gender;
+class Town {
+    constructor(city, trees, cars){
+        this.city = city;
+        this.trees = trees;
+        this.cars = cars;
     }
-  }
-  
-  const person = new Person('Ezra', 28, 'male')
-  
-  console.log(person.name, person.age, person.gender);
+}
+const town = new Town ('augusta', 'oak', 100);
+console.log(town);
+console.log(town.cars, town.trees, town.city);
 
-  class Person extends Newbie {
-      constructor(power){
-          super(name,age,gender)
-          this.power = power;
-      }
-  }
-  const newbie = new Newbie('tara', 16, 'female', 'magic')
-  console.log(`${newbie.name}`);
+class City extends Town{
+    constructor(doors){
+        super(city, trees, cars, doors);
+        this.doors = doors;
+    }
+}
+const city = new City('atl', 'red olk', 5000, 4);
+console.log(city);

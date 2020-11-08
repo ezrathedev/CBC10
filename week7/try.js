@@ -10,3 +10,6 @@ try{
 const fizz = () => {
     throw new console.error('my error message :p');
 }
+const buzz = () => {
+    throw new error.message
+}

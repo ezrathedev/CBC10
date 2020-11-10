@@ -4,7 +4,8 @@
   "description": "",
   "main": "imports.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "author": "",
   "license": "ISC"

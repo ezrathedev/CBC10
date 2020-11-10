@@ -1,8 +1,10 @@
 // 12. Create a new file named file.js. Require both the file system module and the path module.
 const path = require('path'); // importing path 
 const fs = require('fs'); // importing file systems 
+const { dirname } = require('path');
+const { compileFunction } = require('vm');
 // 13. In this file we're going to create a new directory using node.js. To do this you'll want to use the mkdir method available to the fs module. I want you to create a folder named "myNewFolder" in your the root of your project. TIP: look at image below to view the desired folder structure. You'll want to execute file.js with node to execute the instructions and actually create the folder. For the error callback you can just console.log() the error IF there is one.
-fs.mkdir(path.join(__dirname, 'myNewFolder'), (err) => {
+fs.mkdir(path.join(__dirname, 'myNewFolder'), fs.constants.F_OK, (err) => {
     if(err){
         console.log(err);
     } else {
@@ -17,10 +19,19 @@ fs.access(path.join(__dirname, 'myNewFolder'), fs.constants.F_OK, (err) => {
         console.log(err);
     }else {
         fs.mkdir(path.join(__dirname, 'myNewFolder'), () => {
-        }));
+
+        });
     }
 })
 // 15. Create a new file inside of your "myNewFolder" directory the files name should be 'hello.txt' and its contents should be "hello world" (or whatever you like I don't really care) HINT: you can use fs.writeFile() or fs.appendFile()
-
+fs.appendFile(path.join(__dirname, 'myNewFolder', 'hello.txt' ), 'Hello Wotld!',(err) => {
+    if(err) {console.log(err)} else {
+        console.log('yay');
+    }
+})
 // 16. Finally I want you to read from the hello.txt file you just created and write its contents out to the console. HINT: fs.readFile()
-// fs.readFile()
+fs.readFile(path.join(__dirname, 'myNewFolder', 'hello.txt'), 'utf8', (err, data) => {
+    if(err){
+        console.log(err);
+    } else {console.log(data)};
+});

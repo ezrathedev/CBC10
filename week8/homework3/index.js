@@ -5,6 +5,7 @@ const PORT = 3000;
 
 app.use(express.urlencoded({ extended: true })); // used to get the form data.
 
+
 app.get('/', (req, res) => {
 	res.sendFile(path.join(__dirname, 'views/login.html'), (err) => {
 		if (err) {
@@ -13,7 +14,7 @@ app.get('/', (req, res) => {
 	});
 });
 
-app.get('/:page', (req, res) => {
+app.get('/page', (req, res) => {
     
     if (req.params.page == 1 ) {
         res.sendFile(path.join(__dirname, `views/page_1.html`))
@@ -33,3 +34,4 @@ app.post('/', (req,res)=> {
 app.listen(PORT, () => {
 	console.log(`Server running on port ${PORT}...`);
 });
+

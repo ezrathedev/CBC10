@@ -1,6 +1,6 @@
-const os = require('os');
-const fs = require('fs');
-const path = require('path');
+const os = require("os");
+const fs = require("fs");
+const path = require("path");
 console.log(os.cpus());
 console.log(os.platform());
 console.log(os.arch());
@@ -10,8 +10,9 @@ console.log(os.uptime);
 
 // fs.writeFile(path.join(__dirname, 'homework2', specs.txt), (err, data) => {
 //     fs.appendFile(path.join(__dirname, 'homework2', specs.txt), (err, data) = {
-        
+
 //     })
 
 // })
 
+//! Very nice Ezra!
